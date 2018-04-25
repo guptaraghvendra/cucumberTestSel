@@ -4,12 +4,16 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test_Steps {
     @Given("^User is on Home Page$")
     public void user_is_on_Home_Page() throws Exception {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://raghvendra.me");
+        //throw new PendingException();
     }
 
     @When("^User Navigate to LogIn Page$")
